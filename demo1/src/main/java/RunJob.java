@@ -96,8 +96,8 @@ public class RunJob {
             job.setGroupingComparatorClass(Group.class);
 
             //ÊäÈëÊä³öÎÄ¼þÂ·¾¶
-            FileInputFormat.addInputPath(job, new Path("/usr/local/hadooptempdata/input/year-temp/"));
-            FileOutputFormat.setOutputPath(job, new Path("/usr/local/hadooptempdata/output/year-temp/"));
+            FileInputFormat.addInputPath(job, new Path("/data"));
+            FileOutputFormat.setOutputPath(job, new Path("/data/out"));
             System.exit(job.waitForCompletion(true)? 0 : 1);
         }
         catch(Exception e){
